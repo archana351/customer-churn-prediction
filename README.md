@@ -1,41 +1,38 @@
-# customer-churn-prediction
-Customer Churn Prediction System
+Customer Churn Prediction
 
-🚀 A Day-by-Day End-to-End Machine Learning Project targeting Telecom Customer Retention.
+A machine learning pipeline designed to predict customer churn in the telecommunications sector and identify key risk drivers to support data-driven retention strategies.
 
-📌 Project Overview
+Project Overview
 
-Customer churn occurs when customers stop doing business with a company. For telecom providers, acquiring new customers costs significantly more than retaining existing ones. This project builds an end-to-end predictive pipeline that identifies at-risk customers, isolates key churn drivers, and provides actionable business recommendations using optimized machine learning classifiers.
+Retaining existing customers is significantly more cost-effective for telecom providers than acquiring new ones. This project establishes an end-to-end predictive pipeline that flags at-risk accounts and isolates primary churn indicators.
 
-By deploying techniques like SMOTE (Synthetic Minority Over-sampling Technique), this model shifts focus to high Recall to catch maximum churn instances before they happen.
+By applying SMOTE (Synthetic Minority Over-sampling Technique), the model is optimized for high recall, ensuring that the business can identify the maximum number of potential churn cases before they occur.
 
-📈 Key Business Insights & EDA
+Key Insights
 
-During our Exploratory Data Analysis (EDA) and Feature Importance extraction, several critical patterns emerged:
+The exploratory data analysis and feature importance evaluation revealed several critical operational insights:
 
-The First-Year Volatility: Customer churn is heavily concentrated within the first $12$ months of tenure. If a customer stays past year one, their likelihood of leaving drops drastically.
+First-Year Vulnerability: Customer churn is heavily concentrated within the first $12$ months of tenure. Once a customer remains past the first year, their likelihood of leaving drops significantly.
 
-Contract Type is King: Customers on month-to-month contracts exhibit an incredibly high correlation with churn, whereas long-term ($1$-year and $2$-year) contracts act as strong retention anchors.
+Contract Structure: Customers on month-to-month terms exhibit a high correlation with churn, while long-term ($1$-year and $2$-year) agreements act as strong retention anchors.
 
-The Fiber Optic Paradox: While Fiber Optic internet offers the fastest speeds, it correlates positively with churn—indicating potential issues with pricing, service reliability, or competitor promotions in that segment.
+Fiber Optic Anomaly: Despite offering superior speeds, Fiber Optic internet service correlates positively with churn, pointing to potential issues with localized pricing, service reliability, or promotional competitor targeting.
 
-🛠️ Tech Stack & Libraries
+Tech Stack
 
 Environment: Google Colab / Jupyter Notebook
 
-Data Manipulation: pandas, numpy
+Libraries: pandas, numpy, matplotlib, seaborn
 
-Visualization: matplotlib, seaborn
+Modeling: scikit-learn
 
-Machine Learning Framework: scikit-learn
+Class Imbalance: imbalanced-learn (SMOTE)
 
-Imbalanced Data Handling: imbalanced-learn (SMOTE)
+Model Performance & Evaluation
 
-📊 Model Performance & SMOTE Impact
+The original training data suffered from class imbalance, with only $\approx 26.5\%$ of historical records representing churned cases. To address this, SMOTE was applied to the training partition to balance class representation and improve target recall.
 
-Our initial baseline models struggled to predict churned customers accurately due to class imbalance (only $\approx 26.5\%$ of the historical dataset represented churned customers). Applying SMOTE on our training partition successfully resolved this issue and significantly boosted model Recall (our primary target metric for retention).
-
-Classifier Model
+Model
 
 Test Accuracy
 
@@ -73,51 +70,40 @@ $77.56\%$
 
 $57.14\%$
 
-$78.61\%$ 🚀
+$78.61\%$
 
-Why this is a Massive Success:
+Evaluation Analysis
 
-While overall accuracy dropped slightly, our Recall jumped by nearly $30\%$ (from $49.32\%$ to $78.61\%$). In a customer retention scenario, catching $78\%$ of customers planning to leave is infinitely more valuable to business stakeholders than maintaining high overall accuracy while letting half of the departing customers slip through the cracks unnoticed.
+Adjusting the training pipeline with SMOTE improved model recall by nearly $30\%$ (from $49.32\%$ to $78.61\%$).
 
-🧬 Feature Importance (Top Drivers)
+In a proactive customer retention campaign, maximizing recall is highly prioritized. Catching $78\%$ of churn-prone accounts allows marketing teams to deploy targeted retention offers, which yields a much higher business return than keeping overall accuracy high while missing half of the departing customer base.
 
-The Random Forest model identified the following top 5 features influencing customer churn:
+Core Churn Drivers
 
-Total Charges / Monthly Charges: Cost pressures directly accelerate churn.
+The optimized Random Forest model identified the following top 5 features as the most influential indicators of customer churn:
 
-Tenure: Shorter customer relationship length increases volatility.
+Financial Pressure: Total charges and monthly charges.
 
-Contract Type (Month-to-Month): Flexible terms allow low-barrier departures.
+Relationship Length: Shorter customer tenure.
 
-Internet Service (Fiber Optic): Highlights potential service-to-price dissatisfaction.
+Contract Type: Month-to-month agreement structures.
 
-Payment Method (Electronic Check): High correlation compared to automated autopay systems.
+Service Type: Fiber Optic subscription issues.
 
-🚀 How to Run this Project
+Billing Preference: Electronic check payment methods (relative to automated autopay systems).
 
-Clone the Repository:
-(Verify your GitHub username is spelled correctly in the URL below)
+Installation and Execution
 
-git clone [https://github.com/archana351/customer-churn-prediction.git](https://github.com/archana351/customer-churn-prediction.git)
+Clone the repository:
+
+git clone https://github.com/archana351/customer-churn-prediction.git
 cd customer-churn-prediction
 
 
-Open in Google Colab or Jupyter:
-Upload the Customer_Churn_Prediction.ipynb notebook directly to Google Colab or run it locally using Jupyter.
-
-Install Dependencies:
+Install dependencies:
 
 pip install pandas numpy scikit-learn imbalanced-learn matplotlib seaborn
 
 
-Execute all cells to see the raw data pull, automated cleaning pipeline, SMOTE balancing, comparative model metrics, and feature visualizations.
-
-💼 Resume Highlight
-
-Customer Churn Prediction System (Machine Learning)
-
-Developed an end-to-end predictive pipeline using Logistic Regression and Random Forest algorithms on a $7{,}000+$ customer telecom dataset to identify at-risk accounts.
-
-Implemented SMOTE oversampling on the training partition to resolve extreme class imbalance, successfully scaling minority-class Recall from $49.32\%$ to $78.61\%$.
-
-Extracted Random Forest feature importances to deliver key business insights, identifying contract structures and tenure as primary churn drivers to support retention campaign design.
+Run the pipeline:
+Open Customer_Churn_Prediction.ipynb in Google Colab or your local Jupyter environment and execute the cells sequentially to run the data cleaning, modeling, and visualization steps.
