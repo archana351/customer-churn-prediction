@@ -32,45 +32,39 @@ Model Performance & Evaluation
 
 The original training data suffered from class imbalance, with only 26.5% of historical records representing churned cases. To address this, SMOTE was applied to the training partition to balance class representation and improve target recall.
 
-Model
-
-Test Accuracy
-
-Precision
-
-Recall (Catching Churn)
+Model Performance Metrics:
 
 Logistic Regression
 
-80.12%
+Test Accuracy: 80.12%
 
-63.85%
+Precision: 63.85%
 
-55.45%
+Recall (Catching Churn): 55.45%
 
 Decision Tree (Depth = 5)
 
-78.49%
+Test Accuracy: 78.49%
 
-60.10%
+Precision: 60.10%
 
-53.64%
+Recall (Catching Churn): 53.64%
 
 Random Forest (Baseline)
 
-79.11%
+Test Accuracy: 79.11%
 
-63.15%
+Precision: 63.15%
 
-49.32%
+Recall (Catching Churn): 49.32%
 
 Random Forest (Optimized + SMOTE)
 
-77.56%
+Test Accuracy: 77.56%
 
-57.14%
+Precision: 57.14%
 
-78.61%
+Recall (Catching Churn): 78.61%
 
 Evaluation Analysis
 
@@ -107,4 +101,3 @@ pip install pandas numpy scikit-learn imbalanced-learn matplotlib seaborn
 
 Run the pipeline:
 Open your Jupyter notebook environment, load the pipeline notebook file, and execute the cells sequentially to run the data cleaning, modeling, and visualization steps.
-
