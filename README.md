@@ -1,4 +1,4 @@
-Customer Churn Prediction
+Customer Churn Prediction System
 
 A machine learning pipeline designed to predict customer churn in the telecommunications sector and identify key risk drivers to support data-driven retention strategies.
 
@@ -12,9 +12,9 @@ Key Insights
 
 The exploratory data analysis and feature importance evaluation revealed several critical operational insights:
 
-First-Year Vulnerability: Customer churn is heavily concentrated within the first $12$ months of tenure. Once a customer remains past the first year, their likelihood of leaving drops significantly.
+First-Year Vulnerability: Customer churn is heavily concentrated within the first 12 months of tenure. Once a customer remains past the first year, their likelihood of leaving drops significantly.
 
-Contract Structure: Customers on month-to-month terms exhibit a high correlation with churn, while long-term ($1$-year and $2$-year) agreements act as strong retention anchors.
+Contract Structure: Customers on month-to-month terms exhibit a high correlation with churn, while long-term (1-year and 2-year) agreements act as strong retention anchors.
 
 Fiber Optic Anomaly: Despite offering superior speeds, Fiber Optic internet service correlates positively with churn, pointing to potential issues with localized pricing, service reliability, or promotional competitor targeting.
 
@@ -30,7 +30,7 @@ Class Imbalance: imbalanced-learn (SMOTE)
 
 Model Performance & Evaluation
 
-The original training data suffered from class imbalance, with only $\approx 26.5\%$ of historical records representing churned cases. To address this, SMOTE was applied to the training partition to balance class representation and improve target recall.
+The original training data suffered from class imbalance, with only 26.5% of historical records representing churned cases. To address this, SMOTE was applied to the training partition to balance class representation and improve target recall.
 
 Model
 
@@ -42,41 +42,41 @@ Recall (Catching Churn)
 
 Logistic Regression
 
-$80.12\%$
+80.12%
 
-$63.85\%$
+63.85%
 
-$55.45\%$
+55.45%
 
 Decision Tree (Depth = 5)
 
-$78.49\%$
+78.49%
 
-$60.10\%$
+60.10%
 
-$53.64\%$
+53.64%
 
 Random Forest (Baseline)
 
-$79.11\%$
+79.11%
 
-$63.15\%$
+63.15%
 
-$49.32\%$
+49.32%
 
 Random Forest (Optimized + SMOTE)
 
-$77.56\%$
+77.56%
 
-$57.14\%$
+57.14%
 
-$78.61\%$
+78.61%
 
 Evaluation Analysis
 
-Adjusting the training pipeline with SMOTE improved model recall by nearly $30\%$ (from $49.32\%$ to $78.61\%$).
+Adjusting the training pipeline with SMOTE improved model recall by nearly 30% (from 49.32% to 78.61%).
 
-In a proactive customer retention campaign, maximizing recall is highly prioritized. Catching $78\%$ of churn-prone accounts allows marketing teams to deploy targeted retention offers, which yields a much higher business return than keeping overall accuracy high while missing half of the departing customer base.
+In a proactive customer retention campaign, maximizing recall is highly prioritized. Catching 78% of churn-prone accounts allows marketing teams to deploy targeted retention offers, which yields a much higher business return than keeping overall accuracy high while missing half of the departing customer base.
 
 Core Churn Drivers
 
@@ -106,4 +106,5 @@ pip install pandas numpy scikit-learn imbalanced-learn matplotlib seaborn
 
 
 Run the pipeline:
-Open Customer_Churn_Prediction.ipynb in Google Colab or your local Jupyter environment and execute the cells sequentially to run the data cleaning, modeling, and visualization steps.
+Open your Jupyter notebook environment, load the pipeline notebook file, and execute the cells sequentially to run the data cleaning, modeling, and visualization steps.
+
