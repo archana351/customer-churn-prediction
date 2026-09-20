@@ -20,7 +20,7 @@ A machine learning project that predicts whether a telecom customer is likely to
 * Seaborn
 * Scikit-learn
 * Imbalanced-learn (SMOTE)
-* Google Colab / Jupyter Notebook
+* Google Colab 
 
 ## Models Used
 
